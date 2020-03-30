@@ -1,0 +1,130 @@
+<header>
+    Założenia projektu
+  </header>
+    
+  <br/>
+  <section>
+    Do budowy zostaną użyte:    
+    <ul>
+      <li>
+        komputer typu Raspberry Pi (sterownik urządzenia)
+      </li>
+      <li>
+        ekran LCD o wysokiej rozdzielczości (powyżej 500ppi) (ekran roboczy) z usuniętym panelem podświetlenia wraz ze sterownikiem (podłączony do sterownika urządzenia przez standardowe wejście HDMI)
+      </li>
+      <li>
+        kamera o wysokiej rozdzielczości umieszczona nad ekranem roboczym (oś obiektywu przechodzi przez środek ekranu) – podłączona do sterownika urządzenia przez port CSI wg specyfikacji MIPI
+      </li>
+      <li>
+        pomocniczy ekran (np. LCD alfanumeryczny dwulinijkowy) i zestaw przycisków do komunikacji z użytkownikiem (podłączone do sterownika urządzenia przez port GPIO)
+      </li>
+      <li>
+        zestaw diód LED UV o zwiększonej mocy do naświetlania emulsji UV wraz z modułem zasilania sterowanym przez port GPIO
+      </li>
+      <li>
+        zestaw diód białego podświetlenia (lub panel podświetlenia odzyskany z ekranu LCD po jego demontażu) wraz z modułem zasilania sterowanym przez port GPIO
+      </li>
+      <li>
+        jednostka zasilająca
+      </li>
+      <li>
+        obudowa chroniąca użytkownika przed promieniowaniem UV
+      </li>
+      <li>
+        moduł wifi do komunikacji przez sieć Ethernet (podłączany poprzez USB)
+      </li>
+    </ul>
+    <br>
+    Do napisania aplikacji zostaną wykorzystane:
+    <ul>
+      <li>
+        Microsoft Visual Studio Community 2019 pod system Windows – do stworzenia aplikacji sterującej poprzez sieć LAN/WLAN
+      </li>
+      <li>
+        Qt Creator 3.2.2 pod systemem Linux – do stworzenia aplikacji kontrolera działającego w systemie Raspbian
+      </li>
+      <li>
+        kompilator gcc systemu Raspbian
+      </li>
+    </ul>
+    <br>
+    Opis działania urządzenia:
+    <ol type="1">
+      <li>
+        Użytkownik wczytuje do urządzenia pliki w formacie bmp 1-bit z negatywem awersu i rewersu płytki
+      </li>
+      <li>
+        Użytkownik umieszcza na ekranie LCD płytkę pokrytą materiałem UV-czułym i zamyka obudowę
+      </li>
+      <li>
+        Sterownik urządzenia uruchamia białe podświetlenie LED i wykonuje zdjęcie pustego ekranu roboczego z umieszczoną na nim płytką
+      </li>
+      <li>
+        Sterownik dopasowuje bitmapę awersu płytki do wykonanego zdjęcia - tak by bitmapa była w całości zawarta w konturze płytki z zakładanym marginesem
+      </li>
+      <li>
+        Sterownik wyświetla na ekranie roboczym negatyw awersu i uruchamia diody UV na zakładany czas w celu naświetlenia płytki
+      </li>
+      <li>
+        Użytkownik otwiera obudowę i przekłada płytkę na drugą stronę, zamyka obudowę
+      </li>
+      <li>
+        Sterownik urządzenia uruchamia białe podświetlenie LED i wykonuje zdjęcie pustego ekranu roboczego z umieszczoną na nim odwróconą płytką
+      </li>
+      <li>
+        Sterownik dopasowuje uzyskany obraz odwróconej płytki do obrazu płytki uzyskanego w kroku 3. Dopasowanie polega na zastosowaniu takiego przesunięcia i obrotu jednego obrazu względem drugiego, by ich różnica była minimalna. Wektor przesunięcia i kąt obrotu jest następnie stosowany do obrazu rewersu płytki
+      </li>
+      <li>
+        Sterownik wyświetla na ekranie roboczym przetransformowany w kroku 8 negatyw rewersu i uruchamia diody UV na zakładany czas w celu naświetlenia odróconej płytki
+      </li>
+    </ol>
+    <br>
+    Szkic poglądowy głównego elementu roboczego urządzenia
+    <ol type = "1">
+      <li>
+        Element roboczy składa się z:
+        <ul>
+          <li>
+            Elementu konstrukcyjnego (szkieletu), na którym zamocowane są pozostałe elementy
+          </li>
+          <li>
+            Panelu dolnego z diodami LED UV umieszczonymi na elemencie odprowadzającym ciepło
+          </li>
+          <li>
+            Modułu kamery foto umieszczonej na panelu dolnym z obiektywem skierowanym do góry w stronę roboczego ekranu LCD
+          </li>
+          <li>
+            Panelu górnego złożonego z:
+            <ul>
+              <li>
+                Osłony ekranu w postaci szklanej płytki
+              </li>
+              <li>
+                Ekranu LCD z usuniętym panelem podświetlenia
+              </li>
+              <li>
+                Zdejmowalnego panelu podświetlenia światłem białym skierowanym w dół w kierunku ekranu roboczego i kamery 
+                Obrabiany (naświetlany) element jest umieszczony na ekranie roboczym i dociskany panelem podświetlenia
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Element roboczy urządzenia jest odpowiedzialny za:
+        <ul>
+          <li>
+            Naświetlanie obrabianego elementu promieniami UV
+          </li>
+          <li>
+            Podświetlanie obrabianego elementu i roboczego ekranu LCD światłem białym (w kierunku kamery – co umożliwi zdjęcie obrazu kształtu obrabianego elementu i kontórów wyświetlanych na ekranie)
+          </li>
+          <li>
+            Wykonanie zdjęcia ekranu roboczego LCD (po podświetleniu światłem białym przez panel podświetlający)
+          </li>
+        </ul>
+      </li>
+    </ol>
+    Szkic poglądowy elementu roboczego urządzenia (widok z boku)
+    <img class="col-3 diagram" src="img/rys_pogl.png" alt="Szkic poglądowy elementu roboczego urządzenia (widok z boku)" />
+  </section>
