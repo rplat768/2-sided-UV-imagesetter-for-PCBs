@@ -1,0 +1,83 @@
+  <header>
+    Elementy urządzenia
+  </header>
+        
+<ol>
+<li><strong> Kontroler</strong></li>
+</ol>
+<p>Jako kontroler zostanie użyty mikrokomputer Raspberry Pi model 4B 2GB z zainstalowanym systemem operacyjnym Raspbian będącym dystrybucją systemu Linux na tę platformę sprzętową.</p>
+<p>Uzasadnieniem tego wyboru jest:</p>
+<ul>
+<li>wysoka moc obliczeniowa (procesor 4-rdzeniowy ARM-8 Cortex-A72 taktowany zegarem 1.5GHz), co umożliwi szybkie przetwarzanie obraz&oacute;w o dużej rozdzielczości otrzymanych z kamery oraz wczytanych przez użytkownika</li>
+<li>system operacyjny umożliwiający bezproblemowe kompilowanie i uruchamianie program&oacute;w napisanych w C/C++</li>
+<li>interfejs programowalnych wejść i wyjść (szyna GPIO z 40 kanałami możliwymi do zaprogramowania)</li>
+<li>złącza komunikacyjne wraz ze sterownikami systemowymi gotowymi do użycia w warstwie programowej, m.in.:
+<ul>
+<li>szyna komunikacyjna I2C</li>
+<li>szyna komunikacyjna SPI</li>
+<li>złącze CSI (camera serial interface) do obsługi kamer dedykowanych dla platformy Raspberry w standardzie MIPI</li>
+<li>wyjście HDMI ze sterownikami do obsługi wyświetlaczy o wysokich rozdzielczościach</li>
+<li>zintegrowany moduł Wi-Fi do obsługi komunikacji w standardzie Ethernet</li>
+<li>złącza USB</li>
+</ul>
+</li>
+<li>kompaktowe wymiary urządzenia</li>
+<li>niewielkie wymagania w zakresie zasilania (5V, max.1,5A)</li>
+<li>kompatybilność z wieloma szerokodostępnymi amatorskimi modułami do automatyzacji (możliwość zasilania takich moduł&oacute;w napięciem 3.3V lub 5V, max do 750mA</li>
+</ul>
+<p>Wybrany został najwyższy aktualnie dostępny model &ndash; z uwagi na najmniejsze problemy w obsłudze wyświetlaczy z wysoką rozdzielczością oraz z uwagi na najwyższą moc obliczeniową.</p>
+<p><a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/specifications/">https://www.raspberrypi.org/products/raspberry-pi-4-model-b/specifications/</a></p>
+<ol start="2">
+<li><strong>Ekran LCD</strong></li>
+</ol>
+<p>Wybrany model to ekran bardzo popularny w najnowszych drukarkach 3D działających w technologii MSLA (masked stereolithography). Stereolitografia polega na dodawaniu do drukowanego obiektu kolejnych cienkich warstw będących poprzecznymi przekrojami obiektu twrozonymi wzdłuż osi Z. Warstwy te mają grubość rzędu 10-100&micro;m i tworzone są przez utwardzanie płynnej żywicy światłoutwardzalnej. Aby wytworzyć kolejną warstwę obiekt zanurzony jest w pojemniku z żywicą z płaskim przeźroczystym dnem &ndash; tak, by między obiektem a dnem wytworzył się cieńki film żywicy &ndash; o grubości pojedynczej warstwy. W starszej technologii SLA utwardzenie żywicy wg obrazu warstwy powstawało przez naświetlenie całego konturu i wypełnienia przekroju za pomocą poruszającego się w płaszczyźnie XY lasera znajdującego się pod przeźroczystym dnem pojemnika. W technologii MSLA przeźroczyste dno pojemnika jest ekranem LCD ze zdjętym panelem podświetlenia zamienionym na panel emitujący promieniowanie UV (wykorzystywana żywica jest UV-utwardzalna) &ndash; na ekranie tym wyświetlane są w formie negatyw&oacute;w kolejne warstwy drukowanego obiektu. Aby uzyskać obiekt o gładkiej powierzchni konieczne jest użycie ekran&oacute;w o jak największej gęstości pikseli na jednostkę powierzchni.</p>
+<p>Ten pomysł jest wykorzystany do budowy urządzenia w ramach tego projektu &ndash; przy czym jest ograniczony tylko do naświetlenia jednej warstwy.</p>
+<p>Wybrany model wyświetlacza LCD to urządzenie o kodzie producenta: LS055R1SX04. Jest to ekran o przekątnej 5,5 cala (13cm x 7cm), rozdzielczości 2560 x 1440 pikseli, co daje gęstość 534 ppi (pixels per inch), czyli wielkość plamki 47&micro;m x 47&micro;m</p>
+<p>Urządzenie fabrycznie wyposażone jest w sterownik sprzętowy umożliwiający podpięcie do niego sygnału obrazu w standardzie HDMI.</p>
+<p>Na potrzeby projektu ekran należy zmodyfikować usuwając z niego panel tylnego podświetlenia. Panel ten zostanie wykorzystany do podświetlania ekranu w celu wykonania zdjęcia umieszczonej na ekranie płytki PCB. Zostanie on zamontowany do ruchomej pokrywy zamykanej na czas robienia zdjęcia (w celu doświetlenia płytki i wykonania zdjęcia kontur&oacute;w płytki).</p>
+<p>Wybrany został ekran o jak najwyższej rozdzielczości i stosunkowo małych wymiarach &ndash; tak by zapewnić jak najmniejszą wielkość plamki oraz w miarę duży obszar roboczy umożliwiający tworzenie niewielkich płytek PCB &ndash; o maksymalnych wymiarach 12cm x 6cm . Obecnie dostępne są już ekrany o rozdzielczości 4K (3840x2160px) i tych samych rozmiarach ekranu &ndash; ale ich cena jest relatywnie wysoka.</p>
+<p>Ekran jest zasilany przez złącze USB &ndash; czyli napięciem 5V, przy czym maksymalny pob&oacute;r prądu nie przekracza 1A (ekran i panel podświetlający)</p>
+<p><a href="https://pl.aliexpress.com/item/32816576938.html">https://pl.aliexpress.com/item/32816576938.html</a></p>
+<ol start="3">
+<li><strong> Moduł di&oacute;d mocy UV</strong></li>
+</ol>
+<p>Do budowy modułu zostaną użyte diody OSV3XME3E1E producenta OPTOSUPPLY.</p>
+<p>Są to diody mocy sterowane prądowo o standardowym punkcie pracy dla prądu 700mA i napięcia ok. 4,2V &ndash; co daje moc ok. 3W. Diody emitują promieniowanie o dominującej długości fali 380-390nm.</p>
+<p>Do budowy modułu naświetlającego zostanie użytych 6 takich di&oacute;d połączonych szeregowo i zasilanych źr&oacute;dłem prądowym w postaci drivera LED o stałym prądzie 700mA i maksymalnej mocy 21W (model drivera LED &ndash; GPC-20-700 producenta GLP)</p>
+<p>Diody zostaną umieszczone na radiatorach aluminiowych umożliwiających sprawniejsze odprowadzanie ciepła</p>
+<p><a href="https://www.tme.eu/Document/55d774b94fa5d936a927d90dfe136a1b/OSV3XME3E1E-dte.pdf">https://www.tme.eu/Document/55d774b94fa5d936a927d90dfe136a1b/OSV3XME3E1E-dte.pdf</a></p>
+<p><a href="https://glpower.eu/wp-content/uploads/2014/02/GPC-20-spec-PL.pdf">https://glpower.eu/wp-content/uploads/2014/02/GPC-20-spec-PL.pdf</a></p>
+<ol start="4">
+<li><strong> Kamera</strong></li>
+</ol>
+<p>Wybrano urządzenie o rozdzielczości 13Mpix dimyślnie wsp&oacute;łpracujące z mikrokomputerami z platformy Raspberry Pi. Jest o model IMX135 MIPI 13MP producenta Arducam. Kamera umożliwia wykonanie zdjęcia o maksymalnej rozdzielczości 4192&times;3120. Wysoka rozdzielczość urządzenia &ndash; prawie dwukrotnie przewyższająca rozdzielczość ekranu LCD &ndash; powinna umośliwić precyzyjne pozycjonowanie płytki PCB umieszczonej na ekranie. Kamera jest połączona z mikrokomputerem za pomocą taśmy i złącza CSI w standardzie MIPI. Producent kamery dostarcza sterowniki i pakiet SDK umożliwiający prostą obsługę urządzenia.</p>
+<p><a href="https://www.arducam.com/product/imx135-mipi-13mp-color-camera-module-raspberry-pi/">https://www.arducam.com/product/imx135-mipi-13mp-color-camera-module-raspberry-pi/</a></p>
+<ol start="5">
+<li><strong> Moduł zasilania 5V</strong></li>
+</ol>
+<p>Do zasilania mikrokomputera oraz ekranu LCD zostanie użyty prosty zasilacz impulsowy o wydajności prądowej 3A. Wszystkie urządzenia dodatkowe (opr&oacute;cz modułu di&oacute;d UV z własnym zasilaniem) będą zasilane przez wyprowadzenia szyny GPIO mikrokomputera, zatem będą obciążały ten zasilacz.</p>
+<ol start="6">
+<li><strong> Komponenty panelu sterowania urządzenia</strong></li>
+</ol>
+<p>Panel sterowania urządzenia będzie składał się z:</p>
+<ul>
+<li>Ekranu tekstowego LCD o 2 liniach tekstu każdy po 16 znak&oacute;w<br /> Do złącza ekranu będzie dołączony kontroler sprzętowy wykorzystujący interfejs komunikacyjny I2C do obsługi połączenia z mikrokomputerem<br /><a href="https://botland.com.pl/pl/wyswietlacze-alfanumeryczne-i-graficzne/2351-wyswietlacz-lcd-2x16-znakow-niebieski-konwerter-i2c-lcm1602.html">https://botland.com.pl/pl/wyswietlacze-alfanumeryczne-i-graficzne/2351-wyswietlacz-lcd-2x16-znakow-niebieski-konwerter-i2c-lcm1602.html</a></li>
+<li>Enkoder obrotowy &ndash; kt&oacute;ry będzie służył do przewijania list komend, ustalania wartości parametr&oacute;w itp. Enkoder będzie połączony z komputerem przez dwa piny og&oacute;lnego zastosowania interfejsu GPIO</li>
+<li>Przycisk chwilowy typu push &ndash; kt&oacute;ry będzie służył do potwierdzania wyboru pozycji menu itp. Przycisk będzie połączony z mikrokomputerem przez jeden pin GPIO</li>
+<li>Czytnik kart MicroSD &ndash; czytnik wykorzystuje interfejs komunikacyjny SPI do obsługi połączenia z mikrokomputerem</li>
+</ul>
+<p>Do komunikacji za pomocą interfejs&oacute;w SPI i I2C wykorzystane zostaną specjalne piny GPIO.</p>
+<p>Do zasilania zostanie wykorzystane złącze z mikrokomputera.</p>
+<p>Z uwagi na to, że piny wejścia interfejsu GPIO mają maksymalne napięcie 3,3V, a powyższe moduły (kontroler ekranu LCD i czytnik kart MicroSD) pracują na zasilaniu 5V &ndash; do obniżenia napięcia zostanie wykorzystany przetwornik step-down</p>
+<ol start="7">
+<li><strong> Pozostałe komponenty</strong></li>
+</ol>
+<ul>
+<li>Do komunikacji poprzez sieć Ethernet zostanie wykorzystany zintegrowany z mikrokomputerem Raspberry Pi model 4 moduł karty sieciowej Wi-Fi</li>
+<li>Do kontroli zamknięcia pokrywy urządzenia wykorzystany zostanie kontaktron przyłączony do mikrokomputera za pomocą jednego pinu GPIO. Kontakttron umieszczony zostanie w obudowie w pobliżu uchylnej krawędzi pokrywy, na kt&oacute;rej umieszczony zostanie magnes.<br /> Pokrywa ma na celu ochronę użytkownika przez promieniowaniem UV oraz dociskanie panelu podświetlenia światłem białym płytki PCB do ekranu w celu zrobienia zdjęcia i wyznaczenia dokładnej pozycji płytki na ekranie.</li>
+<li>Do załączania i wyłączania modułu di&oacute;d UV oraz panelu podświetlenia ekranu światłem białym zostaną użyte moduły przekaźnik&oacute;w</li>
+<li>Szkielet urządzenia zostanie zbudowany z profili aluminiowych (płaskowniki i kątowniki) oraz z płytki pleksi jako osłony roboczego ekranu LCD. Szkielet będzie konstrukcją nośną dla wszystkich element&oacute;w urządzenia opr&oacute;cz moduł&oacute;w zasilania i Panelu sterowania</li>
+<li>Jako obudowa urządzenia zostanie wykorzystany uniwersalny model Z-39W producenta Kradex o wymiarach 217mm x 294mm x 120mm. Wielkość obudowy umożliwi łatwy montaż wszystkich element&oacute;w oraz dobre chłodzenie.<br /> Jako pokrywa osłaniająca ekran wykorzystana zostanie połowa obudowy Z-44 tego samego producenta.</li>
+</ul>
+<p><a href="https://www.kradex.com.pl/product/enclosures_with_side_panels/z39w_ps">https://www.kradex.com.pl/product/enclosures_with_side_panels/z39w_ps</a></p>
+<p><a href="https://www.kradex.com.pl/product/z44">https://www.kradex.com.pl/product/z44</a></p>
