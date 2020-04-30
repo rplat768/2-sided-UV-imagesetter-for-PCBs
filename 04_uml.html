@@ -14,37 +14,37 @@
 	</h2>
   </section>	
   <section>
-<p><strong>Scenariusz przypadku 1 &ndash; Ustaw długość ekspozycji</strong></p>
-<p>Opis:</p>
-<p>Ustawianie parametru urządzenia określającego czas naświetlania przez zesp&oacute;ł di&oacute;d UV</p>
-<p>Warunki początkowe:</p>
-<p>Urządzenie nie jest w stanie zajętości</p>
-<p>Przebieg gł&oacute;wny:</p>
+<strong>Scenariusz przypadku 1 &ndash; Ustaw długość ekspozycji</strong>
+Opis:
+Ustawianie parametru urządzenia określającego czas naświetlania przez zesp&oacute;ł di&oacute;d UV
+Warunki początkowe:
+Urządzenie nie jest w stanie zajętości
+Przebieg gł&oacute;wny:
 <ol>
 <li>Użytkownik wybiera opcję &bdquo;Ustaw długość ekspozycji&rdquo;</li>
 <li>Urządzenie wyświetla aktualną wartość parametru</li>
 <li>Użytkownik ustawia i potwierdza nową wartość</li>
 </ol>
-<p>3a. Użytkownik nie wykonuje żadnej czynności przez zakładany czas [Przebieg alternatywny]</p>
+3a. Użytkownik nie wykonuje żadnej czynności przez zakładany czas [Przebieg alternatywny]
 <ol start="4">
 <li>Urządzenie zapamiętuje nową wartość</li>
 </ol>
-<p>Przebieg alternatywny 3a &ndash; Użytkownik nie wykonuje żadnej czynności:</p>
+Przebieg alternatywny 3a &ndash; Użytkownik nie wykonuje żadnej czynności:
 <ol>
 <li>Urządzenie wraca do menu gł&oacute;wnego</li>
 </ol>
-<p>Warunki końcowe:</p>
-<p>Urządzenie przechowuje nową wartość parametru czas ekspozycji</p>
-<p><strong>Scenariusz przypadku 2 &ndash; Załąduj pliki z obrazami awersu i rewersu płytki</strong></p>
-<p>Opis:</p>
-<p>Załadowanie do pamięci urządzenia plik&oacute;w z obrazami awersu i rewersu płytki</p>
-<p>Warunki początkowe:</p>
-<p>Urządzenie nie jest w stanie zajętości</p>
-<p>Przebieg gł&oacute;wny:</p>
+Warunki końcowe:
+Urządzenie przechowuje nową wartość parametru czas ekspozycji
+<strong>Scenariusz przypadku 2 &ndash; Załąduj pliki z obrazami awersu i rewersu płytki</strong>
+Opis:
+Załadowanie do pamięci urządzenia plik&oacute;w z obrazami awersu i rewersu płytki
+Warunki początkowe:
+Urządzenie nie jest w stanie zajętości
+Przebieg gł&oacute;wny:
 <ol>
 <li>Użytkownik wybiera opcję &bdquo;Wczytaj pliki&rdquo;</li>
 </ol>
-<p>Urządzenie wyświetla listę dostępnych plik&oacute;w spełniających założenia:</p>
+Urządzenie wyświetla listę dostępnych plik&oacute;w spełniających założenia:
 <ul>
 <li>W przypadku korzystania z Panelu sterowania wyświetlana jest lista plik&oacute;w dostępna na znajdującej się w czytniku karcie MicroSD</li>
 <li>W przypadku Aplikacji sieciowej wyświetlana jest lista plik&oacute;w z domyślnego folderu importowego</li>
@@ -55,7 +55,7 @@
 </ul>
 </li>
 </ul>
-<p>Na liście powyższe pliki wyświetlane są w postaci [unikalna_nazwa]_2s</p>
+Na liście powyższe pliki wyświetlane są w postaci [unikalna_nazwa]_2s
 <ul>
 <li>Dla projekt&oacute;w płytek PCB do jednostronnego naświetlania:
 <ul>
@@ -63,136 +63,136 @@
 </ul>
 </li>
 </ul>
-<p>Na liście powyższy plik wyświetlany jest w postaci [unikalna_nazwa]_1s</p>
-<p>2a. Brak plik&oacute;w spełniających założenia [Przebieg alternatywny]</p>
+Na liście powyższy plik wyświetlany jest w postaci [unikalna_nazwa]_1s
+2a. Brak plik&oacute;w spełniających założenia [Przebieg alternatywny]
 <ol start="2">
 <li>Użytkownik wybiera plik</li>
 </ol>
-<p>3a. Użytkownik nie wykonuje żadnej czynności przez zakładany czas [Przebieg alternatywny]</p>
+3a. Użytkownik nie wykonuje żadnej czynności przez zakładany czas [Przebieg alternatywny]
 <ol start="3">
 <li>Urządzenie wczytuje pliki do pamięci</li>
 <li>Urządzenie sprawdza poprawność plik&oacute;w [Scenariusz użycia 2.1]</li>
 </ol>
-<p>5a. Pliki nie są poprawne [Przebieg alternatywny]</p>
+5a. Pliki nie są poprawne [Przebieg alternatywny]
 <ol start="5">
 <li>Urządzenie wyświetla potwierdzenie wczytania plik&oacute;w i przechodzi do menu gł&oacute;wnego</li>
 </ol>
-<p>Przebieg alternatywny 2a &ndash; Brak plik&oacute;w spełniających założenia:</p>
+Przebieg alternatywny 2a &ndash; Brak plik&oacute;w spełniających założenia:
 <ol>
 <li>Urządzenie wyświetla komunikat o braku plik&oacute;w</li>
 <li>Urządzenie przechodzi do menu gł&oacute;wnego</li>
 </ol>
-<p>Przebieg alternatywny 3a &ndash; Użytkownik nie wykonuje żadnej czynności:</p>
+Przebieg alternatywny 3a &ndash; Użytkownik nie wykonuje żadnej czynności:
 <ol>
 <li>Urządzenie wraca do menu gł&oacute;wnego</li>
 </ol>
-<p>Przebieg alternatywny 5a &ndash; Pliki nie są poprawne:</p>
+Przebieg alternatywny 5a &ndash; Pliki nie są poprawne:
 <ol>
 <li>Urządzenie wyświetla komunikat o niepoprawności plik&oacute;w</li>
 <li>Urządzenie usuwa wczytane pliki z pamięci</li>
 <li>Urządzenie przechodzi do menu gł&oacute;wnego</li>
 </ol>
-<p>Warunki końcowe:</p>
-<p>Urządzenie przechowuje w pamięci wczytane pliki</p>
-<p><strong>Scenariusz przypadku 2.1 &ndash; Sprawdź poprawność plik&oacute;w</strong></p>
-<p>Opis:</p>
-<p>Sprawdzenie, czy załadowane do pamięci pliki są zgodne z przyjętymi założeniami</p>
-<p>Warunki początkowe:</p>
-<p>Urządzenie ma wczytane do pamięci pliki.</p>
-<p>Przebieg gł&oacute;wny:</p>
+Warunki końcowe:
+Urządzenie przechowuje w pamięci wczytane pliki
+<strong>Scenariusz przypadku 2.1 &ndash; Sprawdź poprawność plik&oacute;w</strong>
+Opis:
+Sprawdzenie, czy załadowane do pamięci pliki są zgodne z przyjętymi założeniami
+Warunki początkowe:
+Urządzenie ma wczytane do pamięci pliki.
+Przebieg gł&oacute;wny:
 <ol>
 <li>Sprawdzenie czy plik z końc&oacute;wką nazwy &bdquo;_awers.bmp&rdquo; ma rozdzielczość mniejszą niż zakładana (zmieści się na ekranie LCD z zakładanym marginesem)</li>
 </ol>
-<p>1a. Plik awers ma niepoprawną rozdzielczość [Przebieg alternatywny]</p>
+1a. Plik awers ma niepoprawną rozdzielczość [Przebieg alternatywny]
 <ol start="2">
 <li>Jeśli plik z końc&oacute;wką nazwy &bdquo;_rewers.bmp&rdquo; istnieje &ndash; sprawdzenie czy ma identyczną rozdzielczość jak plik awers</li>
 </ol>
-<p>2a. Plik rewers ma niepoprawną rozdzielczość [Przebieg alternatywny]</p>
+2a. Plik rewers ma niepoprawną rozdzielczość [Przebieg alternatywny]
 <ol start="3">
 <li>Sprawdzenie czy pliki mają prawidłową strukturę plik&oacute;w bmp 1-bitowych</li>
 </ol>
-<p>3a. Pliki mają niepoprawną strukturę [Przebieg alternatywny]</p>
+3a. Pliki mają niepoprawną strukturę [Przebieg alternatywny]
 <ol start="4">
 <li>Urządzenie zapamiętuje poprawny status plik&oacute;w</li>
 </ol>
-<p>Przebieg alternatywny 1a &ndash; Plik awers ma niepoprawną rozdzielczość, 2a. Plik rewers ma niepoprawną rozdzielczość, 3a. Pliki mają niepoprawną strukturę:</p>
+Przebieg alternatywny 1a &ndash; Plik awers ma niepoprawną rozdzielczość, 2a. Plik rewers ma niepoprawną rozdzielczość, 3a. Pliki mają niepoprawną strukturę:
 <ol>
 <li>Urządzenie zapamiętuje niepoprawny status plik&oacute;w</li>
 <li>Urządzenie zapamiętuje opis błędu</li>
 <li>Urządzenie kończy sprawdzanie plik&oacute;w</li>
 </ol>
-<p>Warunki końcowe:</p>
-<p>Urządzenie zapamiętuje status plik&oacute;w i ewentualnie opis błędu</p>
-<p><strong>Scenariusz przypadku 3 &ndash; Wykonaj samo naświetlenie</strong></p>
-<p>Opis:</p>
-<p>Urządzenie włącza moduł di&oacute;d UV na czas r&oacute;wny zapamiętanemu parametrowi długość ekspozycji</p>
-<p>Warunki początkowe:</p>
-<p>Urządzenie nie jest w stanie zajętości, pokrywa urządzenia jest opuszczona</p>
-<p>Przebieg gł&oacute;wny:</p>
+Warunki końcowe:
+Urządzenie zapamiętuje status plik&oacute;w i ewentualnie opis błędu
+<strong>Scenariusz przypadku 3 &ndash; Wykonaj samo naświetlenie</strong>
+Opis:
+Urządzenie włącza moduł di&oacute;d UV na czas r&oacute;wny zapamiętanemu parametrowi długość ekspozycji
+Warunki początkowe:
+Urządzenie nie jest w stanie zajętości, pokrywa urządzenia jest opuszczona
+Przebieg gł&oacute;wny:
 <ol>
 <li>Użytkownik wybiera opcję &bdquo;Wykonaj samo naświetlenie&rdquo;</li>
 <li>Urządzenie sprawdza, czy pokrywa jest zamknięta [Scenariusz przypadku 3.1]</li>
 </ol>
-<p>2a. Pokrywa jest otwarta [Przebieg alternatywny]</p>
+2a. Pokrywa jest otwarta [Przebieg alternatywny]
 <ol start="3">
 <li>Urządzenie uruchamia moduł naświetląjący UV [Scenariusz przypadku 3.2]</li>
 <li>Urządzenie sygnalizuje zakończenie pracy i przechodzi do menu gł&oacute;wnego</li>
 </ol>
-<p>Przebieg alternatywny 2a &ndash; Pokrywa jest otwarta:</p>
+Przebieg alternatywny 2a &ndash; Pokrywa jest otwarta:
 <ol>
 <li>Urządzenie wyświetla komunikat o otwartej pokrywie</li>
 <li>Urządzenie przechodzi do menu gł&oacute;wnego</li>
 </ol>
-<p>Warunki końcowe:</p>
-<p>Urządzenie przechodzi do menu gł&oacute;wnego</p>
-<p><strong>Scenariusz przypadku 3.1 &ndash; Sprawdzenie zamknięcia pokrywy urządzenia</strong></p>
-<p>Opis:</p>
-<p>Urządzenie sprawdza i zapamiętuje status zamknięcia pokrywy</p>
-<p>Warunki początkowe:</p>
-<p>brak</p>
-<p>Przebieg gł&oacute;wny:</p>
+Warunki końcowe:
+Urządzenie przechodzi do menu gł&oacute;wnego
+<strong>Scenariusz przypadku 3.1 &ndash; Sprawdzenie zamknięcia pokrywy urządzenia</strong>
+Opis:
+Urządzenie sprawdza i zapamiętuje status zamknięcia pokrywy
+Warunki początkowe:
+brak
+Przebieg gł&oacute;wny:
 <ol>
 <li>Urządzenie sprawdza, czy kontaktron umieszczony przy pokrywie jest zamknięty. Zamknięcie kontaktronu oznacza zamknięcie pokrywy</li>
 </ol>
-<p>Warunki końcowe:</p>
-<p>Urządzenie zapamiętuje stan zamknięcia pokrywy</p>
-<p><strong>Scenariusz przypadku 3.2 &ndash; Uruchomienie modułu naświetlającego UV</strong></p>
-<p>Opis:</p>
-<p>Urządzenie włącza moduł di&oacute;d UV na czas r&oacute;wny zapamiętanemu parametrowi długość ekspozycji</p>
-<p>Warunki początkowe:</p>
-<p>Urządzenie nie jest w stanie zajętości, pokrywa urządzenia jest opuszczona</p>
-<p>Przebieg gł&oacute;wny:</p>
+Warunki końcowe:
+Urządzenie zapamiętuje stan zamknięcia pokrywy
+<strong>Scenariusz przypadku 3.2 &ndash; Uruchomienie modułu naświetlającego UV</strong>
+Opis:
+Urządzenie włącza moduł di&oacute;d UV na czas r&oacute;wny zapamiętanemu parametrowi długość ekspozycji
+Warunki początkowe:
+Urządzenie nie jest w stanie zajętości, pokrywa urządzenia jest opuszczona
+Przebieg gł&oacute;wny:
 <ol>
 <li>Urządzenie włącza zasilanie modułu UV i przechodzi w stan zajętości na czas r&oacute;wny długości ekspozycji &ndash; zapamiętanemu parametrowi</li>
 </ol>
-<p>1a. Pokrywa została otwarta w czasie naświetlania [Przebieg alternatywny]</p>
+1a. Pokrywa została otwarta w czasie naświetlania [Przebieg alternatywny]
 <ol start="2">
 <li>Urządzenie wyłącza zasilanie modułu UV</li>
 </ol>
-<p>Przebieg alternatywny 1a &ndash; Pokrywa jest otwarta:</p>
+Przebieg alternatywny 1a &ndash; Pokrywa jest otwarta:
 <ol>
 <li>Urządzenie wyłącza zasilanie modułu UV</li>
 <li>Urządzenie wyświetla komunikat o otwartej pokrywie</li>
 <li>Urządzenie przechodzi do menu gł&oacute;wnego</li>
 </ol>
-<p>Warunki końcowe:</p>
-<p>Urządzenie pozostaje w trybie zajętości [przebieg gł&oacute;wny] lub przechodzi do menu gł&oacute;wnego [przebieg alternatywny]</p>
-<p><strong>Scenariusz przypadku 4 &ndash; Wykonaj naświetlanie dwustronne</strong></p>
-<p>Opis:</p>
-<p>Urządzenie wykonuje naświetlanie dwustronne płytki PCB wg wczytanych do pamięci plik&oacute;w</p>
-<p>Warunki początkowe:</p>
-<p>Urządzenie nie jest w stanie zajętości, w pamięci są pliki do naświetlania dwustronnego</p>
-<p>Przebieg gł&oacute;wny:</p>
+Warunki końcowe:
+Urządzenie pozostaje w trybie zajętości [przebieg gł&oacute;wny] lub przechodzi do menu gł&oacute;wnego [przebieg alternatywny]
+<strong>Scenariusz przypadku 4 &ndash; Wykonaj naświetlanie dwustronne</strong>
+Opis:
+Urządzenie wykonuje naświetlanie dwustronne płytki PCB wg wczytanych do pamięci plik&oacute;w
+Warunki początkowe:
+Urządzenie nie jest w stanie zajętości, w pamięci są pliki do naświetlania dwustronnego
+Przebieg gł&oacute;wny:
 <ol>
 <li>Użytkownik umieszcza płytkę PCB na ekranie urządzenia</li>
 <li>Użytkownik wybiera opcję &bdquo;Wykonaj naświetlanie&rdquo;</li>
 <li>Urządzenie sprawdza, czy pokrywa jest zamknięta [Scenariusz przypadku 3.1]</li>
 </ol>
-<p>3a. Pokrywa jest otwarta [Przebieg alternatywny]</p>
+3a. Pokrywa jest otwarta [Przebieg alternatywny]
 <ol start="4">
 <li>Urządzenie sprawdza zgodność wymiarową płytki PCB z plikiem awersu [Scenariusz przypadku 4.1]</li>
 </ol>
-<p>4a. Płytka nie jest zgodna wymiarowo z obrazem awersu [Przebieg alternatywny]</p>
+4a. Płytka nie jest zgodna wymiarowo z obrazem awersu [Przebieg alternatywny]
 <ol start="5">
 <li>Urządzenie wykonuje dopasowanie obrazu awersu do obrazu płytki PCB [Scenariusz przypadku 4.2]</li>
 <li>Urządzenie wyświetla na ekranie zmodyfikowany plik awersu</li>
@@ -201,19 +201,19 @@
 <li>Użytkownik przekłada płytkę na drugą stronę i potwierdza</li>
 <li>Urządzenie sprawdza, czy pokrywa jest zamknięta [Scenariusz przypadku 3.1]</li>
 </ol>
-<p>10a. Pokrywa jest otwarta [Przebieg alternatywny]</p>
+10a. Pokrywa jest otwarta [Przebieg alternatywny]
 <ol start="11">
 <li>Urządzenie wykonuje dopasowanie obrazu rewersu do obrazu płytki PCB i do zmodyfikowanego pliku awersu [Scenariusz przypadku 4.3]</li>
 <li>Urządzenie wyświetla na ekranie zmodyfikowany plik rewersu</li>
 <li>Urządzenie uruchamia moduł naświetlający UV [Scenariusz przypadku 3.2]</li>
 <li>Urządzenie sygnalizuje zakończenie pracy i przechodzi do menu gł&oacute;wnego</li>
 </ol>
-<p>Przebieg alternatywny 3a &ndash; Pokrywa jest otwarta:</p>
+Przebieg alternatywny 3a &ndash; Pokrywa jest otwarta:
 <ol>
 <li>Urządzenie wyświetla komunikat o otwartej pokrywie</li>
 <li>Urządzenie przechodzi do menu gł&oacute;wnego</li>
 </ol>
-<p>Przebieg alternatywny 10a &ndash; Pokrywa jest otwarta:</p>
+Przebieg alternatywny 10a &ndash; Pokrywa jest otwarta:
 <ol>
 <li>Urządzenie wyświetla komunikat o otwartej pokrywie</li>
 <li>Urządzenie czeka określony czas i sprawdza zamknięcie pokrywy [Scenariusz użycia 3.1]</li>
@@ -225,19 +225,19 @@
 </li>
 <li>Jeśli pokrywa jest zamknięta wr&oacute;ć do wykonywania kroku 11 przebiegu gł&oacute;wnego</li>
 </ol>
-<p>Przebieg alternatywny 4a &ndash; Płytka nie jest zgodna wymiarowo z obrazem awersu:</p>
+Przebieg alternatywny 4a &ndash; Płytka nie jest zgodna wymiarowo z obrazem awersu:
 <ol>
 <li>Urządzenie wyświetla komunikat o niezgodniości wymiarowej płytki i obrazu awersu</li>
 <li>Urządzenie przechodzi do menu gł&oacute;wnego</li>
 </ol>
-<p>Warunki końcowe:</p>
-<p>Urządzenie przechodzi do menu gł&oacute;wnego</p>
-<p><strong>Scenariusz przypadku 4.1 &ndash; Sprawdź zgodność wymiarową płytki PCB z plikiem awersu</strong></p>
-<p>Opis:</p>
-<p>Urządzenie sprawdza zgodność wymiar&oacute;w obiektu z przetworzonego zdjęcia płytki PCB umieszczonej na ekranie LCD wykonanej kamerą oraz obiektu z pliku z obrazem awersu przechowywanym w pamięci</p>
-<p>Warunki początkowe:</p>
-<p>Urządzenie jest w stanie zajętości, w pamięci jest plik obrazu awersu</p>
-<p>Przebieg gł&oacute;wny:</p>
+Warunki końcowe:
+Urządzenie przechodzi do menu gł&oacute;wnego
+<strong>Scenariusz przypadku 4.1 &ndash; Sprawdź zgodność wymiarową płytki PCB z plikiem awersu</strong>
+Opis:
+Urządzenie sprawdza zgodność wymiar&oacute;w obiektu z przetworzonego zdjęcia płytki PCB umieszczonej na ekranie LCD wykonanej kamerą oraz obiektu z pliku z obrazem awersu przechowywanym w pamięci
+Warunki początkowe:
+Urządzenie jest w stanie zajętości, w pamięci jest plik obrazu awersu
+Przebieg gł&oacute;wny:
 <ol>
 <li>Urządzenie wykonuje zdjęcie płytki PCB [Scenariusz przypadku 4.5]</li>
 <li>Urządzenie przetwarza odczytany z kamery plik graficzny:</li>
@@ -248,7 +248,7 @@
 <li>Znalezienie wierzchołk&oacute;w czworokąta opisującego ekran LCD (krawędzie zewnętrzne białego obszaru)</li>
 <li>Znalezienie wierzchołk&oacute;w czworokąta opisującego obraz płytki PCB (krawędzie wewnętrzne białego obszaru)</li>
 </ol>
-<p>2.4a. Brak możliwości wyznaczenia czworokąt&oacute;w opisujących [Przebieg alternatywny]</p>
+2.4a. Brak możliwości wyznaczenia czworokąt&oacute;w opisujących [Przebieg alternatywny]
 <ol start="5">
 <li>Transformacja obrazu &ndash; tak by czworokąt opisujący krawędzie ekranu dał w jej wyniku prostokąt o wymiarach r&oacute;wnych fizycznej rozdzielczości ekranu LCD</li>
 <li>Przeliczenie wierzchołk&oacute;w czworokąta opisującego płytkę PCB wg znalezionej w p.2.5 transformacji
@@ -259,28 +259,28 @@
 <li>Wyznaczenie długości bok&oacute;w obrazu płytki na podstawie zapamiętanych wyliczonych wierzchołk&oacute;w po transformacji</li>
 <li>Por&oacute;wnaj wymiary &ndash; wymiary obrazu awersu powinny być mniejsze od wymiar&oacute;w obrazu płytki po transformacji</li>
 </ol>
-<p>3a. Niezgodność wymiarowa płytki i awersu [Przebieg alternatywny]</p>
+3a. Niezgodność wymiarowa płytki i awersu [Przebieg alternatywny]
 <ol start="4">
 <li>Urządzenie zapamiętuje parametry znalezionej transformacji obrazu z kamery oraz wyliczone wierzchołki obrazu płytki PCB</li>
 </ol>
-<p>Przebieg alternatywny 2.4a &ndash; Brak możliwości wyznaczenia czworokąt&oacute;w opisujących:</p>
+Przebieg alternatywny 2.4a &ndash; Brak możliwości wyznaczenia czworokąt&oacute;w opisujących:
 <ol>
 <li>Urządzenie wyświetla komunikat o niepoprawnym ułożeniu płytki PCB na ekranie LCD</li>
 <li>Urządzenie przechodzi do menu gł&oacute;wnego</li>
 </ol>
-<p>Przebieg alternatywny 3a &ndash; Niezgodność wymiarowa płytki i awersu:</p>
+Przebieg alternatywny 3a &ndash; Niezgodność wymiarowa płytki i awersu:
 <ol>
 <li>Urządzenie wyświetla komunikat o niezgodności wymiarowej płytki i obrazu awersu</li>
 <li>Urządzenie przechodzi do menu gł&oacute;wnego</li>
 </ol>
-<p>Warunki końcowe:</p>
-<p>Urządzenie zapamiętuje parametry znalezionej transformacji obrazu z kamery oraz wyliczone wierzchołki obrazu płytki PCB</p>
-<p><strong>Scenariusz przypadku 4.2 &ndash; Dopasuj awers do płytki PCB</strong></p>
-<p>Opis:</p>
-<p>Urządzenie dopasowuje obraz awersu z pamięci do obrazu płytki po transformacji do rzeczywistych rozmiar&oacute;w ekranu LCD wyznaczonej w Scenariuszu 4.1</p>
-<p>Warunki początkowe:</p>
-<p>Urządzenie jest w stanie zajętości, w pamięci jest plik obrazu awersu oraz parametry transformacji i wyliczone wsp&oacute;łrzędne wierzchołk&oacute;w obrazu płytki po transformacji (transformacja wyznaczona w Scenariuszu 4.1)</p>
-<p>Przebieg gł&oacute;wny:</p>
+Warunki końcowe:
+Urządzenie zapamiętuje parametry znalezionej transformacji obrazu z kamery oraz wyliczone wierzchołki obrazu płytki PCB
+<strong>Scenariusz przypadku 4.2 &ndash; Dopasuj awers do płytki PCB</strong>
+Opis:
+Urządzenie dopasowuje obraz awersu z pamięci do obrazu płytki po transformacji do rzeczywistych rozmiar&oacute;w ekranu LCD wyznaczonej w Scenariuszu 4.1
+Warunki początkowe:
+Urządzenie jest w stanie zajętości, w pamięci jest plik obrazu awersu oraz parametry transformacji i wyliczone wsp&oacute;łrzędne wierzchołk&oacute;w obrazu płytki po transformacji (transformacja wyznaczona w Scenariuszu 4.1)
+Przebieg gł&oacute;wny:
 <ol>
 <li>Dopasowanie obrazu awersu do wierzchołk&oacute;w obrazu płytki PCB</li>
 </ol>
@@ -295,14 +295,14 @@
 </ol>
 </li>
 </ol>
-<p>Warunki końcowe:</p>
-<p>Urządzenie zapamiętuje szerokości margines&oacute;w zastosowanych do wzajemnego spozycjonowania płytki PCB i obrazu awersu (konieczne do wyznaczenia identycznej pozycji dla rewersu) oraz zmodyfikowany obraz awersu (po zastosowaniu transformacji pozycjonującej wzajemnie rzeczywisty obraz płytki i awersu)</p>
-<p><strong>Scenariusz przypadku 4.3 &ndash; Dopasuj rewers do płytki PCB i do zmodyfikowanego awersu</strong></p>
-<p>Opis:</p>
-<p>Urządzenie dopasowuje obraz rewersu z pamięci do obrazu płytki po transformacji do rzeczywistych rozmiar&oacute;w ekranu LCD wyznaczonej w Scenariuszu 4.1</p>
-<p>Warunki początkowe:</p>
-<p>Urządzenie jest w stanie zajętości, w pamięci jest plik obrazu rewersu oraz szerokości margines&oacute;w zastosowanych do pozycjonowania pliku awersu (wyznaczone w Scenariuszu 4.2)</p>
-<p>Przebieg gł&oacute;wny:</p>
+Warunki końcowe:
+Urządzenie zapamiętuje szerokości margines&oacute;w zastosowanych do wzajemnego spozycjonowania płytki PCB i obrazu awersu (konieczne do wyznaczenia identycznej pozycji dla rewersu) oraz zmodyfikowany obraz awersu (po zastosowaniu transformacji pozycjonującej wzajemnie rzeczywisty obraz płytki i awersu)
+<strong>Scenariusz przypadku 4.3 &ndash; Dopasuj rewers do płytki PCB i do zmodyfikowanego awersu</strong>
+Opis:
+Urządzenie dopasowuje obraz rewersu z pamięci do obrazu płytki po transformacji do rzeczywistych rozmiar&oacute;w ekranu LCD wyznaczonej w Scenariuszu 4.1
+Warunki początkowe:
+Urządzenie jest w stanie zajętości, w pamięci jest plik obrazu rewersu oraz szerokości margines&oacute;w zastosowanych do pozycjonowania pliku awersu (wyznaczone w Scenariuszu 4.2)
+Przebieg gł&oacute;wny:
 <ol>
 <li>Sprawdź zgodność wymiarową płytki PCB z plikiem rewersu [Scenariusz przypadku 4.4]</li>
 <li>Dopasowanie obrazu rewersu do wierzchołk&oacute;w obrazu płytki PCB</li>
@@ -312,7 +312,7 @@
 <li>Wyliczenie szerokości margines&oacute;w &ndash; tak by obraz awersu znajdował się w środku obrazu płytki (r&oacute;żnica długości odpowiednich bok&oacute;w obrazu awersu i obrazu płytki podzielona przez 2)</li>
 <li>Por&oacute;wnanie wyznaczonych margines&oacute;w z zapamiętanymi marginesami dla awersu z uwzględnieniem założonych poziom&oacute;w błędu</li>
 </ol>
-<p>2.3a. Niezgodnośc margines&oacute;w rewersu i awersu [Przebieg alternatywny]</p>
+2.3a. Niezgodnośc margines&oacute;w rewersu i awersu [Przebieg alternatywny]
 <ol start="4">
 <li>Przyjęcie za marginesy rewersu lustrzanego odbicia margines&oacute;w awersu (zamiana prawego z lewym)</li>
 <li>Wyliczenie kąta obrotu dla obrazu rewersu tak by boki prostokąta opisującego obraz rewersu były r&oacute;wnoległe do bok&oacute;w obrazu płytki (wyliczenie kąta utworzonego przez dłuższy bok obrazu płytki z osią x)</li>
@@ -323,20 +323,20 @@
 </ol>
 </li>
 </ol>
-<p>Przebieg alternatywny 2.3a &ndash; Niezgodnośc margines&oacute;w rewersu i awersu:</p>
+Przebieg alternatywny 2.3a &ndash; Niezgodnośc margines&oacute;w rewersu i awersu:
 <ol>
 <li>Urządzenie wyświetla komunikat o niezgodności wymiar&oacute;w płytki po odwr&oacute;ceniu</li>
 <li>Urządzenie wyświetla komunikat o konieczności umieszczenia na ekranie LCD właściwej płytki we właściwy spos&oacute;b (brak styku z krawędziami ekranu)</li>
 <li>Urządzenie przechodzi do stanu oczekiwania na potwierdzenie przełożenia płytki &ndash; Scenariusz 4 Krok 9</li>
 </ol>
-<p>Warunki końcowe:</p>
-<p>Urządzenie zapamiętuje zmodyfikowany obraz rewersu (po zastosowaniu transformacji pozycjonującej wzajemnie rzeczywisty obraz płytki i rewersu z uwzględnieniem pozycjonowania awersu na płytce)</p>
-<p><strong>Scenariusz przypadku 4.4 &ndash; Sprawdź zgodność wymiarową płytki PCB z plikiem rewersu</strong></p>
-<p>Opis:</p>
-<p>Urządzenie sprawdza zgodność wymiar&oacute;w obiektu z przetworzonego zdjęcia płytki PCB umieszczonej na ekranie LCD wykonanej kamerą oraz obiektu z pliku z obrazem rewersu przechowywanym w pamięci</p>
-<p>Warunki początkowe:</p>
-<p>Urządzenie jest w stanie zajętości, w pamięci jest plik obrazu awersu</p>
-<p>Przebieg gł&oacute;wny:</p>
+Warunki końcowe:
+Urządzenie zapamiętuje zmodyfikowany obraz rewersu (po zastosowaniu transformacji pozycjonującej wzajemnie rzeczywisty obraz płytki i rewersu z uwzględnieniem pozycjonowania awersu na płytce)
+<strong>Scenariusz przypadku 4.4 &ndash; Sprawdź zgodność wymiarową płytki PCB z plikiem rewersu</strong>
+Opis:
+Urządzenie sprawdza zgodność wymiar&oacute;w obiektu z przetworzonego zdjęcia płytki PCB umieszczonej na ekranie LCD wykonanej kamerą oraz obiektu z pliku z obrazem rewersu przechowywanym w pamięci
+Warunki początkowe:
+Urządzenie jest w stanie zajętości, w pamięci jest plik obrazu awersu
+Przebieg gł&oacute;wny:
 <ol>
 <li>Urządzenie wykonuje zdjęcie płytki PCB [Scenariusz przypadku 4.5]</li>
 <li>Urządzenie przetwarza odczytany z kamery plik graficzny:</li>
@@ -347,7 +347,7 @@
 <li>Znalezienie wierzchołk&oacute;w czworokąta opisującego ekran LCD (krawędzie zewnętrzne białego obszaru)</li>
 <li>Znalezienie wierzchołk&oacute;w czworokąta opisującego obraz płytki PCB (krawędzie wewnętrzne białego obszaru)</li>
 </ol>
-<p>2.4a. Brak możliwości wyznaczenia czworokąt&oacute;w opisujących [Przebieg alternatywny]</p>
+2.4a. Brak możliwości wyznaczenia czworokąt&oacute;w opisujących [Przebieg alternatywny]
 <ol start="5">
 <li>Transformacja obrazu &ndash; tak by czworokąt opisujący krawędzie ekranu dał w jej wyniku prostokąt o wymiarach r&oacute;wnych fizycznej rozdzielczości ekranu LCD</li>
 <li>Przeliczenie wierzchołk&oacute;w czworokąta opisującego płytkę PCB wg znalezionej w p.2.5 transformacji
@@ -358,80 +358,80 @@
 <li>Wyznaczenie długości bok&oacute;w obrazu płytki na podstawie zapamiętanych wyliczonych wierzchołk&oacute;w po transformacji</li>
 <li>Por&oacute;wnaj wymiary &ndash; wymiary obrazu rewersu powinny być mniejsze od wymiar&oacute;w obrazu płytki po transformacji</li>
 </ol>
-<p>3a. Niezgodność wymiarowa płytki i rewersu [Przebieg alternatywny]</p>
+3a. Niezgodność wymiarowa płytki i rewersu [Przebieg alternatywny]
 <ol start="4">
 <li>Urządzenie zapamiętuje parametry znalezionej transformacji obrazu z kamery oraz wyliczone wierzchołki obrazu płytki PCB</li>
 </ol>
-<p>Przebieg alternatywny 2.4a &ndash; Brak możliwości wyznaczenia czworokąt&oacute;w opisujących:</p>
+Przebieg alternatywny 2.4a &ndash; Brak możliwości wyznaczenia czworokąt&oacute;w opisujących:
 <ol start="2">
 <li>Urządzenie wyświetla komunikat o niepoprawnym ułożeniu płytki PCB na ekranie LCD</li>
 <li>Urządzenie wyświetla komunikat o konieczności umieszczenia na ekranie LCD właściwej płytki we właściwy spos&oacute;b (brak styku z krawędziami ekranu)</li>
 <li>Urządzenie przechodzi do stanu oczekiwania na potwierdzenie przełożenia płytki &ndash; Scenariusz 4 Krok 9</li>
 </ol>
-<p>Przebieg alternatywny 3a &ndash; Niezgodność wymiarowa płytki i rewersu:</p>
+Przebieg alternatywny 3a &ndash; Niezgodność wymiarowa płytki i rewersu:
 <ol>
 <li>Urządzenie wyświetla komunikat o niezgodności wymiarowej płytki i obrazu rewersu</li>
 <li>Urządzenie wyświetla komunikat o konieczności umieszczenia na ekranie LCD właściwej płytki we właściwy spos&oacute;b (brak styku z krawędziami ekranu)</li>
 <li>Urządzenie przechodzi do stanu oczekiwania na potwierdzenie przełożenia płytki &ndash; Scenariusz 4 Krok 9</li>
 </ol>
-<p>Warunki końcowe:</p>
-<p>Urządzenie zapamiętuje parametry znalezionej transformacji obrazu z kamery oraz wyliczone wierzchołki obrazu płytki PCB</p>
-<p><strong>Scenariusz przypadku 4.5 &ndash; Wykonaj zdjęcie płytki PCB</strong></p>
-<p>Opis:</p>
-<p>Urządzenie wykonuje zdjęcie podświetlonego ekranu LCD</p>
-<p>Warunki początkowe:</p>
-<p>Pokrywa urządzenia jest opuszczona</p>
-<p>Przebieg gł&oacute;wny:</p>
+Warunki końcowe:
+Urządzenie zapamiętuje parametry znalezionej transformacji obrazu z kamery oraz wyliczone wierzchołki obrazu płytki PCB
+<strong>Scenariusz przypadku 4.5 &ndash; Wykonaj zdjęcie płytki PCB</strong>
+Opis:
+Urządzenie wykonuje zdjęcie podświetlonego ekranu LCD
+Warunki początkowe:
+Pokrywa urządzenia jest opuszczona
+Przebieg gł&oacute;wny:
 <ol>
 <li>Urządzenie sprawdza, czy pokrywa jest zamknięta [Scenariusz przypadku 3.1]</li>
 </ol>
-<p>1a. Pokrywa jest otwarta [Przebieg alternatywny]</p>
+1a. Pokrywa jest otwarta [Przebieg alternatywny]
 <ol start="2">
 <li>Urządzenie uruchamia moduł podświetlenia ekranu LCD</li>
 <li>Urządzenie uruchamia kamerę i wykonuje zdjęcie w najwyższej rozdzielczości z ustawieniami zgodnymi z założeniami</li>
 <li>Urządzenie zapamiętuje otrzymany plik obrazu</li>
 </ol>
-<p>Przebieg alternatywny 2a &ndash; Pokrywa jest otwarta:</p>
+Przebieg alternatywny 2a &ndash; Pokrywa jest otwarta:
 <ol>
 <li>Urządzenie wyświetla komunikat o otwartej pokrywie i przechodzi w stan oczekiwania na zamknięcie pokrywy</li>
 <li>Jeśli pokrywa zostaje zamknięta urządzenie wraca do wykonania kroku 2 z przebiegu gł&oacute;wnego</li>
 </ol>
-<p>Warunki końcowe:</p>
-<p>Urządzenie zapamiętuje plik z wykonanym zdjęciem</p>
-<p><strong>Scenariusz przypadku 5 &ndash; Wykonaj naświetlanie jednostronne</strong></p>
-<p>Opis:</p>
-<p>Urządzenie wykonuje naświetlanie jednostronne płytki PCB wg wczytanego do pamięci pliku</p>
-<p>Warunki początkowe:</p>
-<p>Urządzenie nie jest w stanie zajętości, w pamięci jest plik do naświetlania jednostronnego</p>
-<p>Przebieg gł&oacute;wny:</p>
+Warunki końcowe:
+Urządzenie zapamiętuje plik z wykonanym zdjęciem
+<strong>Scenariusz przypadku 5 &ndash; Wykonaj naświetlanie jednostronne</strong>
+Opis:
+Urządzenie wykonuje naświetlanie jednostronne płytki PCB wg wczytanego do pamięci pliku
+Warunki początkowe:
+Urządzenie nie jest w stanie zajętości, w pamięci jest plik do naświetlania jednostronnego
+Przebieg gł&oacute;wny:
 <ol>
 <li>Użytkownik umieszcza płytkę PCB na ekranie urządzenia</li>
 <li>Użytkownik wybiera opcję &bdquo;Wykonaj naświetlanie&rdquo;</li>
 <li>Urządzenie sprawdza, czy pokrywa jest zamknięta [Scenariusz przypadku 3.1]</li>
 </ol>
-<p>3a. Pokrywa jest otwarta [Przebieg alternatywny]</p>
+3a. Pokrywa jest otwarta [Przebieg alternatywny]
 <ol start="4">
 <li>Urządzenie sprawdza zgodność wymiarową płytki PCB z plikiem awersu [Scenariusz przypadku 4.1]</li>
 </ol>
-<p>4a. Płytka nie jest zgodna wymiarowo z obrazem awersu [Przebieg alternatywny]</p>
+4a. Płytka nie jest zgodna wymiarowo z obrazem awersu [Przebieg alternatywny]
 <ol start="5">
 <li>Urządzenie wykonuje dopasowanie obrazu awersu do obrazu płytki PCB [Scenariusz przypadku 4.2]</li>
 <li>Urządzenie wyświetla na ekranie zmodyfikowany plik awersu</li>
 <li>Urządzenie uruchamia moduł naświetlający UV [Scenariusz przypadku 3.2]</li>
 <li>Urządzenie sygnalizuje zakończenie pracy i przechodzi do menu gł&oacute;wnego</li>
 </ol>
-<p>Przebieg alternatywny 3a &ndash; Pokrywa jest otwarta:</p>
+Przebieg alternatywny 3a &ndash; Pokrywa jest otwarta:
 <ol>
 <li>Urządzenie wyświetla komunikat o otwartej pokrywie</li>
 <li>Urządzenie przechodzi do menu gł&oacute;wnego</li>
 </ol>
-<p>Przebieg alternatywny 4a &ndash; Płytka nie jest zgodna wymiarowo z obrazem awersu:</p>
+Przebieg alternatywny 4a &ndash; Płytka nie jest zgodna wymiarowo z obrazem awersu:
 <ol>
 <li>Urządzenie wyświetla komunikat o niezgodniości wymiarowej płytki i obrazu awersu</li>
 <li>Urządzenie przechodzi do menu gł&oacute;wnego</li>
 </ol>
-<p>Warunki końcowe:</p>
-<p>Urządzenie przechodzi do menu gł&oacute;wnego</p>
+Warunki końcowe:
+Urządzenie przechodzi do menu gł&oacute;wnego
   </section>	
 	<h2>
 		Diagram maszyny stanów
