@@ -104,3 +104,7 @@ section {
   padding-left: 20px;
 }
 
+.diagram, .zdjecie {
+    display: block;
+    float: none;
+}
